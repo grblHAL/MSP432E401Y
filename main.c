@@ -47,7 +47,7 @@ int main(void)
     /* Call driver init functions */
     MSP_EXP432E401Y_initGeneral();
 
-    xTaskCreate(vGrblTask, "Grbl", configMINIMAL_STACK_SIZE, NULL, 0, NULL);
+    xTaskCreate(vGrblTask, "grblHAL", 8192, NULL, 0, NULL);
 
     vTaskStartScheduler();
 

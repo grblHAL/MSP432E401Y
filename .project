@@ -24,33 +24,6 @@
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>lwip/ports/msp432e4</name>
-			<type>2</type>
-			<locationURI>COM_TI_SIMPLELINK_MSP432E4_SDK_INSTALL_DIR/source/third_party/lwip/ports/msp432e4</locationURI>
-		</link>
-		<link>
-			<name>lwip/src/api</name>
-			<type>2</type>
-			<locationURI>COM_TI_SIMPLELINK_MSP432E4_SDK_INSTALL_DIR/source/third_party/lwip/src/api</locationURI>
-		</link>
-		<link>
-			<name>lwip/src/core</name>
-			<type>2</type>
-			<locationURI>COM_TI_SIMPLELINK_MSP432E4_SDK_INSTALL_DIR/source/third_party/lwip/src/core</locationURI>
-		</link>
-		<link>
-			<name>lwip/src/include</name>
-			<type>2</type>
-			<locationURI>COM_TI_SIMPLELINK_MSP432E4_SDK_INSTALL_DIR/source/third_party/lwip/src/include</locationURI>
-		</link>
-		<link>
-			<name>lwip/src/netif</name>
-			<type>2</type>
-			<locationURI>COM_TI_SIMPLELINK_MSP432E4_SDK_INSTALL_DIR/source/third_party/lwip/src/netif</locationURI>
-		</link>
-	</linkedResources>
 	<variableList>
 		<variable>
 			<name>FREERTOS_LOC</name>
