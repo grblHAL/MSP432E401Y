@@ -31,7 +31,7 @@
 //*****************************************************************************
 #define HOST_TMR_INTERVAL               40         // default is 0
 #define DHCP_EXPIRE_TIMER_MSECS         (10 * 1000)
-#define LWIP_HTTPD_SSI                  1
+#define LWIP_HTTPD_SSI                  0
 #define LWIP_HTTPD_CGI                  1
 #define LWIP_HTTPD_DYNAMIC_HEADERS      1
 //#define HTTPD_DEBUG                     LWIP_DBG_ON
@@ -52,6 +52,11 @@
 #endif
 #define NUM_TX_DESCRIPTORS 8
 #define NUM_RX_DESCRIPTORS 8
+
+#define LWIP_HTTPD_CUSTOM_FILES         1
+#define LWIP_HTTPD_SUPPORT_V09          0
+#define LWIP_HTTPD_SUPPORT_11_KEEPALIVE 1
+#define LWIP_HTTPD_DYNAMIC_FILE_READ    1
 
 #define LWIP_DONT_PROVIDE_BYTEORDER_FUNCTIONS
 
@@ -231,7 +236,7 @@
 //#define TCP_MAXRTX                      12
 //#define TCP_SYNMAXRTX                   6
 //#define TCP_QUEUE_OOSEQ                 1
-#define TCP_MSS                        1500        // default is 128
+#define TCP_MSS                        1460        // default is 128
 //#define TCP_CALCULATE_EFF_SEND_MSS      1
 #define TCP_SND_BUF                     (4 * TCP_MSS)
                                                     // default is 256, was 6 *
