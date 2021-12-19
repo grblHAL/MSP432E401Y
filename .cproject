@@ -50,7 +50,7 @@
 									<listOptionValue builtIn="false" value="${PROJECT_ROOT}//third_party"/>
 									<listOptionValue builtIn="false" value="${PROJECT_ROOT}//third_party/lwip/src/include"/>
 									<listOptionValue builtIn="false" value="${PROJECT_ROOT}//third_party/lwip/ports/msp432e4/include"/>
-									<listOptionValue builtIn="false" value="&quot;D:/Projects/CCS/GRBL Driver MSP432E401Y/third_party/lwip/ports/msp432e4/include/utils&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/third_party/lwip/ports/msp432e4/include/utils&quot;"/>
 									<listOptionValue builtIn="false" value="${COM_TI_SIMPLELINK_MSP432E4_SDK_INCLUDE_PATH}"/>
 									<listOptionValue builtIn="false" value="${FREERTOS_INSTALL_DIR}/FreeRTOS/Source/include"/>
 									<listOptionValue builtIn="false" value="${FREERTOS_INSTALL_DIR}/FreeRTOS/Source/portable/CCS/ARM_CM4F"/>
@@ -80,8 +80,8 @@
 							</tool>
 							<tool id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.exe.linkerDebug.1261878334" name="Arm Linker" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.exe.linkerDebug">
 								<option id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.linkerID.MAP_FILE.1766976358" name="Link information (map) listed into &lt;file&gt; (--map_file, -m)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.linkerID.MAP_FILE" value="${ProjName}.map" valueType="string"/>
-								<option id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.linkerID.STACK_SIZE.452271950" name="Set C system stack size (--stack_size, -stack)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.linkerID.STACK_SIZE" value="16384" valueType="string"/>
-								<option id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.linkerID.HEAP_SIZE.1202300333" name="Heap size for C/C++ dynamic memory allocation (--heap_size, -heap)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.linkerID.HEAP_SIZE" value="16384" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.linkerID.STACK_SIZE.452271950" name="Set C system stack size (--stack_size, -stack)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.linkerID.STACK_SIZE" value="48000" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.linkerID.HEAP_SIZE.1202300333" name="Heap size for C/C++ dynamic memory allocation (--heap_size, -heap)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.linkerID.HEAP_SIZE" value="48000" valueType="string"/>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.linkerID.OUTPUT_FILE.645924269" name="Specify output file name (--output_file, -o)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.linkerID.OUTPUT_FILE" value="${ProjName}.out" valueType="string"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.MSP432_20.2.linkerID.LIBRARY.673581158" name="Include library file or command file as input (--library, -l)" superClass="com.ti.ccstudio.buildDefinitions.MSP432_20.2.linkerID.LIBRARY" valueType="libs">
 									<listOptionValue builtIn="false" value="${FREERTOS_LOC}/Debug/freertos_builds_MSP_EXP432E401Y_release_ccs.lib"/>
