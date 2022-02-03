@@ -5,7 +5,7 @@
 
   Part of grblHAL
 
-  Copyright (c) 2018-2021 Terje Io
+  Copyright (c) 2018-2022 Terje Io
 
   Grbl is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -44,10 +44,10 @@ static void vGrblTask (void * pvParameters)
 
 int main(void)
 {
-    /* Call driver init functions */
     MSP_EXP432E401Y_initGeneral();
 
-    xTaskCreate(vGrblTask, "grblHAL", 8192, NULL, 0, NULL);
+    // NOTE: Task priority has to be lower than the "eth_int" task started in lwiplib.c
+    xTaskCreate(vGrblTask, "grblHAL", 8192, NULL, tskIDLE_PRIORITY, NULL);
 
     vTaskStartScheduler();
 
