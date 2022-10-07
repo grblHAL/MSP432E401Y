@@ -29,7 +29,7 @@
 // ---------- MSP432E4 / lwIP Port Options ----------
 //
 //*****************************************************************************
-#define HOST_TMR_INTERVAL               40         // default is 0
+#define HOST_TMR_INTERVAL               1         // default is 0
 #define DHCP_EXPIRE_TIMER_MSECS         (10 * 1000)
 #define LWIP_HTTPD_SSI                  0
 #define LWIP_HTTPD_CGI                  1
@@ -53,7 +53,7 @@
 #define NUM_TX_DESCRIPTORS 8
 #define NUM_RX_DESCRIPTORS 8
 
-#define LWIP_HTTPD_CUSTOM_FILES         1
+#define LWIP_HTTPD_CUSTOM_FILES         0
 #define LWIP_HTTPD_SUPPORT_V09          0
 #define LWIP_HTTPD_SUPPORT_11_KEEPALIVE 1
 #define LWIP_HTTPD_DYNAMIC_FILE_READ    1
@@ -105,7 +105,7 @@
 //#define MEMP_NUM_REASSDATA              5
 //#define MEMP_NUM_ARP_QUEUE              30
 //#define MEMP_NUM_IGMP_GROUP             8
-#define MEMP_NUM_SYS_TIMEOUT              8 //5
+#define MEMP_NUM_SYS_TIMEOUT              20 //5
 //#define MEMP_NUM_NETBUF                 2
 //#define MEMP_NUM_NETCONN                4
 //#define MEMP_NUM_TCPIP_MSG_API          8
@@ -201,7 +201,7 @@
 // ---------- IGMP options ----------
 //
 //*****************************************************************************
-//#define LWIP_IGMP                       0
+#define LWIP_IGMP                       1
 
 //*****************************************************************************
 //
