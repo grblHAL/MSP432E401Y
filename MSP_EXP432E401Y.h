@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018, Texas Instruments Incorporated
+ * Copyright (c) 2017-2019, Texas Instruments Incorporated
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -90,6 +90,60 @@ typedef enum MSP_EXP432E401Y_ADCBuf0ChannelName {
 } MSP_EXP432E401Y_ADCBuf0ChannelName;
 
 /*!
+ *  @def    MSP_EXP432E401Y_AESECBName
+ *  @brief  Enum of virtual AESECB instances on the MSP_EXP432E401Y dev board
+ */
+typedef enum MSP_EXP432E401Y_AESECBName {
+    MSP_EXP432E401Y_AESECB0 = 0,
+    MSP_EXP432E401Y_AESECBCOUNT
+} MSP_EXP432E401Y_AESECBName;
+
+/*!
+ *  @def    MSP_EXP432E401Y_AESCBCName
+ *  @brief  Enum of virtual AESCBC instances on the MSP_EXP432E401Y dev board
+ */
+typedef enum MSP_EXP432E401Y_AESCBCName {
+    MSP_EXP432E401Y_AESCBC0 = 0,
+    MSP_EXP432E401Y_AESCBCCOUNT
+} MSP_EXP432E401Y_AESCBCName;
+
+/*!
+ *  @def    MSP_EXP432E401Y_AESCTRName
+ *  @brief  Enum of virtual AESCTR instances on the MSP_EXP432E401Y dev board
+ */
+typedef enum MSP_EXP432E401Y_AESCTRName {
+    MSP_EXP432E401Y_AESCTR0 = 0,
+    MSP_EXP432E401Y_AESCTRCOUNT
+} MSP_EXP432E401Y_AESCTRName;
+
+/*!
+ *  @def    MSP_EXP432E401Y_AESCCMName
+ *  @brief  Enum of virtual AESCCM instances on the MSP_EXP432E401Y dev board
+ */
+typedef enum MSP_EXP432E401Y_AESCCMName {
+    MSP_EXP432E401Y_AESCCM0 = 0,
+    MSP_EXP432E401Y_AESCCMCOUNT
+} MSP_EXP432E401Y_AESCCMName;
+
+/*!
+ *  @def    MSP_EXP432E401Y_AESGCMName
+ *  @brief  Enum of virtual AESGCM instances on the MSP_EXP432E401Y dev board
+ */
+typedef enum MSP_EXP432E401Y_AESGCMName {
+    MSP_EXP432E401Y_AESGCM0 = 0,
+    MSP_EXP432E401Y_AESGCMCOUNT
+} MSP_EXP432E401Y_AESGCMName;
+
+/*!
+ *  @def    MSP_EXP432E401Y_AESCTRDRBGName
+ *  @brief  Enum of virtual AESCTRDRBG instances on the MSP_EXP432E401Y dev board
+ */
+typedef enum MSP_EXP432E401Y_AESCTRDRBGName {
+    MSP_EXP432E401Y_AESCTRDRBG0 = 0,
+    MSP_EXP432E401Y_AESCTRDRBGCOUNT
+} MSP_EXP432E401Y_AESCTRDRBGName;
+
+/*!
  *  @def    MSP_EXP432E401Y_CANName
  *  @brief  Enum of CAN controllers on the MSP_EXP432E401Y dev board
  */
@@ -101,25 +155,46 @@ typedef enum MSP_EXP432E401Y_CANName {
 } MSP_EXP432E401Y_CANName;
 
 /*!
+ * @def    MSP_EXP432E401Y_ComparatorName
+ * @brief  Enum of Comparator instances on the MSP_EXP432E401Y dev board
+ */
+typedef enum MSP_EXP432E401Y_ComparatorName {
+    MSP_EXP432E401Y_COMP0,
+    MSP_EXP432E401Y_COMP1,
+    MSP_EXP432E401Y_COMP2,
+    MSP_EXP432E401Y_COMPCOUNT
+} MSP_EXP432E401Y_ComparatorName;
+
+/*!
+ *  @def    MSP_EXP432E401Y_CRCName
+ *  @brief  Enum of CRC instances on the MSP_EXP432E401Y dev board
+ */
+typedef enum MSP_EXP432E401Y_CRCName {
+    MSP_EXP432E401Y_CRC0 = 0,
+    MSP_EXP432E401Y_CRCCOUNT
+} MSP_EXP432E401Y_CRCName;
+
+/*!
  *  @def    MSP_EXP432E401Y_GPIOName
  *  @brief  Enum of LED names on the MSP_EXP432E401Y dev board
  */
 typedef enum MSP_EXP432E401Y_GPIOName {
-    MSP_EXP432E401Y_SDSPI_CS = 0,
-    MSP_EXP432E401Y_GPIO_USR_SW1,
+    MSP_EXP432E401Y_GPIO_USR_SW1 = 0,
     MSP_EXP432E401Y_GPIO_USR_SW2,
     MSP_EXP432E401Y_SPI_MASTER_READY,
     MSP_EXP432E401Y_SPI_SLAVE_READY,
     MSP_EXP432E401Y_GPIO_D1,
     MSP_EXP432E401Y_GPIO_D2,
+    MSP_EXP432E401Y_GPIO_TMP116_EN,
 
+    MSP_EXP432E401Y_SDSPI_CS,
 
     /* Sharp LCD Pins */
     MSP_EXP432E401Y_LCD_CS,
     MSP_EXP432E401Y_LCD_POWER,
     MSP_EXP432E401Y_LCD_ENABLE,
 
-    MSP_EXP432E401Y_GPIOCOUNT = 1
+    MSP_EXP432E401Y_GPIOCOUNT
 } MSP_EXP432E401Y_GPIOName;
 
 /*!
@@ -128,7 +203,6 @@ typedef enum MSP_EXP432E401Y_GPIOName {
  */
 typedef enum MSP_EXP432E401Y_I2CName {
     MSP_EXP432E401Y_I2C0 = 0,
-    MSP_EXP432E401Y_I2C7,
 
     MSP_EXP432E401Y_I2CCOUNT
 } MSP_EXP432E401Y_I2CName;
@@ -172,6 +246,16 @@ typedef enum MSP_EXP432E401Y_SDName {
 
     MSP_EXP432E401Y_SDCOUNT
 } MSP_EXP432E401Y_SDName;
+
+/*!
+ *  @def    MSP_EXP432E401Y_SHA2Name
+ *  @brief  Enum of SHA2 driver instance names on the MSP_EXP432E401Y dev board
+ */
+typedef enum MSP_EXP432E401Y_SHA2Name {
+    MSP_EXP432E401Y_SHA20 = 0,
+
+    MSP_EXP432E401Y_SHA2COUNT
+} MSP_EXP432E401Y_SHA2Name;
 
 /*!
  *  @def    MSP_EXP432E401Y_SPIName

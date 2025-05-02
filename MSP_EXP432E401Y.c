@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018, Texas Instruments Incorporated
+ * Copyright (c) 2017-2019, Texas Instruments Incorporated
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -188,6 +188,145 @@ const ADCBuf_Config ADCBuf_config[MSP_EXP432E401Y_ADCBUFCOUNT] = {
 const uint_least8_t ADCBuf_count = MSP_EXP432E401Y_ADCBUFCOUNT;
 
 /*
+ *  =============================== AESECB ===============================
+ */
+#include <ti/drivers/AESECB.h>
+#include <ti/drivers/aesecb/AESECBMSP432E4.h>
+
+AESECBMSP432E4_Object aesecbMSP432E4Objects[MSP_EXP432E401Y_AESECBCOUNT];
+
+const AESECBMSP432E4_HWAttrs aesecbMSP432E4HWAttrs[MSP_EXP432E401Y_AESECBCOUNT] = {
+    {0}
+};
+
+const AESECB_Config AESECB_config[MSP_EXP432E401Y_AESECBCOUNT] = {
+    {
+         .object  = &aesecbMSP432E4Objects[MSP_EXP432E401Y_AESECB0],
+         .hwAttrs = &aesecbMSP432E4HWAttrs[MSP_EXP432E401Y_AESECB0]
+    },
+};
+
+const uint_least8_t AESECB_count = MSP_EXP432E401Y_AESECBCOUNT;
+
+/*
+ *  =============================== AESCBC ===============================
+ */
+#include <ti/drivers/AESCBC.h>
+#include <ti/drivers/aescbc/AESCBCMSP432E4.h>
+
+AESCBCMSP432E4_Object aescbcMSP432E4Objects[MSP_EXP432E401Y_AESCBCCOUNT];
+
+const AESCBCMSP432E4_HWAttrs aescbcMSP432E4HWAttrs[MSP_EXP432E401Y_AESCBCCOUNT] = {
+    {
+        .intPriority       = (~0),
+    }
+};
+
+const AESCBC_Config AESCBC_config[MSP_EXP432E401Y_AESCBCCOUNT] = {
+    {
+         .object  = &aescbcMSP432E4Objects[MSP_EXP432E401Y_AESCBC0],
+         .hwAttrs = &aescbcMSP432E4HWAttrs[MSP_EXP432E401Y_AESCBC0]
+    },
+};
+
+const uint_least8_t AESCBC_count = MSP_EXP432E401Y_AESCBCCOUNT;
+
+
+/*
+ *  =============================== AESCTR ===============================
+ */
+#include <ti/drivers/AESCTR.h>
+#include <ti/drivers/aesctr/AESCTRMSP432E4.h>
+
+AESCTRMSP432E4_Object aesctrMSP432E4Objects[MSP_EXP432E401Y_AESCTRCOUNT];
+
+const AESCTRMSP432E4_HWAttrs aesctrMSP432E4HWAttrs[MSP_EXP432E401Y_AESCTRCOUNT] = {
+    {
+        .intPriority       = (~0),
+    }
+};
+
+const AESCTR_Config AESCTR_config[MSP_EXP432E401Y_AESCTRCOUNT] = {
+    {
+         .object  = &aesctrMSP432E4Objects[MSP_EXP432E401Y_AESCTR0],
+         .hwAttrs = &aesctrMSP432E4HWAttrs[MSP_EXP432E401Y_AESCTR0]
+    },
+};
+
+const uint_least8_t AESCTR_count = MSP_EXP432E401Y_AESCTRCOUNT;
+
+/*
+ *  =============================== AESCCM ===============================
+ */
+#include <ti/drivers/AESCCM.h>
+#include <ti/drivers/aesccm/AESCCMMSP432E4.h>
+
+AESCCMMSP432E4_Object aesccmMSP432E4Objects[MSP_EXP432E401Y_AESCCMCOUNT];
+
+const AESCCMMSP432E4_HWAttrs aesccmMSP432E4HWAttrs[MSP_EXP432E401Y_AESCCMCOUNT] = {
+    {
+        .intPriority       = (~0),
+    }
+};
+
+const AESCCM_Config AESCCM_config[MSP_EXP432E401Y_AESCCMCOUNT] = {
+    {
+         .object  = &aesccmMSP432E4Objects[MSP_EXP432E401Y_AESCCM0],
+         .hwAttrs = &aesccmMSP432E4HWAttrs[MSP_EXP432E401Y_AESCCM0]
+    },
+};
+
+const uint_least8_t AESCCM_count = MSP_EXP432E401Y_AESCCMCOUNT;
+
+/*
+ *  =============================== AESGCM ===============================
+ */
+#include <ti/drivers/AESGCM.h>
+#include <ti/drivers/aesgcm/AESGCMMSP432E4.h>
+
+AESGCMMSP432E4_Object aesgcmMSP432E4Objects[MSP_EXP432E401Y_AESGCMCOUNT];
+
+const AESGCMMSP432E4_HWAttrs aesgcmMSP432E4HWAttrs[MSP_EXP432E401Y_AESGCMCOUNT] = {
+    {
+        .intPriority       = (~0),
+    }
+};
+
+const AESGCM_Config AESGCM_config[MSP_EXP432E401Y_AESGCMCOUNT] = {
+    {
+         .object  = &aesgcmMSP432E4Objects[MSP_EXP432E401Y_AESGCM0],
+         .hwAttrs = &aesgcmMSP432E4HWAttrs[MSP_EXP432E401Y_AESGCM0]
+    },
+};
+
+const uint_least8_t AESGCM_count = MSP_EXP432E401Y_AESGCMCOUNT;
+
+
+/*
+ *  =============================== AESCTRDRBG ===============================
+ */
+#include <ti/drivers/AESCTRDRBG.h>
+#include <ti/drivers/aesctrdrbg/AESCTRDRBGXX.h>
+
+AESCTRDRBGXX_Object aesctrdrbgXXObjects[MSP_EXP432E401Y_AESCTRDRBGCOUNT];
+
+const AESCTRDRBGXX_HWAttrs aesctrdrbgXXHWAttrs[MSP_EXP432E401Y_AESCTRDRBGCOUNT] = {
+    {
+        .aesctrIndex       = MSP_EXP432E401Y_AESCTR0,
+    }
+};
+
+const AESCTRDRBG_Config AESCTRDRBG_config[MSP_EXP432E401Y_AESCTRDRBGCOUNT] = {
+    {
+         .object  = &aesctrdrbgXXObjects[MSP_EXP432E401Y_AESCTRDRBG0],
+         .hwAttrs = &aesctrdrbgXXHWAttrs[MSP_EXP432E401Y_AESCTRDRBG0]
+    },
+};
+
+const uint_least8_t AESCTRDRBG_count = MSP_EXP432E401Y_AESCTRDRBGCOUNT;
+
+
+/*
  *  =============================== CAN ===============================
  */
 #include <ti/drivers/CAN.h>
@@ -241,6 +380,81 @@ const CAN_Config CAN_config[MSP_EXP432E401Y_CANCOUNT] = {
 };
 
 const uint_least8_t CAN_count = MSP_EXP432E401Y_CANCOUNT;
+
+/*
+ * ============================= Comparator ===========================
+ */
+#include <ti/drivers/Comparator.h>
+#include <ti/drivers/comparator/ComparatorMSP432E4.h>
+
+ComparatorMSP432E4_Object comparatorMSP432E4Objects[MSP_EXP432E401Y_COMPCOUNT];
+
+const ComparatorMSP432E4_HWAttrs comparatorMSP432E4HWAttrs[MSP_EXP432E401Y_COMPCOUNT] = {
+     {
+          .compNum = MSP_EXP432E401Y_COMP0,
+          .intNum = INT_COMP0,
+          .intPriority = (~0),
+          .positiveTerminal = ComparatorMSP432E4_INPUT_REF,
+          .refLevel = ComparatorMSP432E4_REF_1_1V,
+          .triggerLevel = ComparatorMSP432E4_TRIG_HIGH,
+          .outputPin = COMP0_OUTPUT_PIN_PD0
+     },
+     {
+          .compNum = MSP_EXP432E401Y_COMP1,
+          .intNum = INT_COMP1,
+          .intPriority = (~0),
+          .positiveTerminal = ComparatorMSP432E4_INPUT_REF,
+          .refLevel = ComparatorMSP432E4_REF_1_1V,
+          .triggerLevel = ComparatorMSP432E4_TRIG_HIGH,
+          .outputPin = COMP1_OUTPUT_PIN_PD1
+     },
+     {
+          .compNum = MSP_EXP432E401Y_COMP2,
+          .intNum = INT_COMP2,
+          .intPriority = (~0),
+          .positiveTerminal = ComparatorMSP432E4_INPUT_REF,
+          .refLevel = ComparatorMSP432E4_REF_1_1V,
+          .triggerLevel = ComparatorMSP432E4_TRIG_HIGH,
+          .outputPin = COMP2_OUTPUT_PIN_PD2
+     }
+};
+
+const Comparator_Config Comparator_config[MSP_EXP432E401Y_COMPCOUNT] = {
+    {
+         .fxnTablePtr = &ComparatorMSP432E4_fxnTable,
+         .hwAttrs = &comparatorMSP432E4HWAttrs[MSP_EXP432E401Y_COMP0],
+         .object = &comparatorMSP432E4Objects[MSP_EXP432E401Y_COMP0]
+    },
+    {
+         .fxnTablePtr = &ComparatorMSP432E4_fxnTable,
+         .hwAttrs = &comparatorMSP432E4HWAttrs[MSP_EXP432E401Y_COMP1],
+         .object = &comparatorMSP432E4Objects[MSP_EXP432E401Y_COMP1]
+    },
+    {
+         .fxnTablePtr = &ComparatorMSP432E4_fxnTable,
+         .hwAttrs = &comparatorMSP432E4HWAttrs[MSP_EXP432E401Y_COMP2],
+         .object = &comparatorMSP432E4Objects[MSP_EXP432E401Y_COMP2]
+    }
+};
+
+const uint_least8_t Comparator_count = MSP_EXP432E401Y_COMPCOUNT;
+
+/*
+ *  =============================== CRC ===============================
+ */
+#include <ti/drivers/CRC.h>
+#include <ti/drivers/crc/CRCMSP432E4.h>
+
+CRCMSP432E4_Object crcMSP432E4Objects[MSP_EXP432E401Y_CRCCOUNT];
+
+const CRC_Config CRC_config[MSP_EXP432E401Y_CRCCOUNT] = {
+    {
+         .object  = &crcMSP432E4Objects[MSP_EXP432E401Y_CRC0],
+         .hwAttrs = NULL
+    },
+};
+
+const uint_least8_t CRC_count = MSP_EXP432E401Y_CRCCOUNT;
 
 /*
  *  ============================= Display =============================
@@ -321,14 +535,7 @@ const uint_least8_t Display_count = sizeof(Display_config) / sizeof(Display_Conf
  */
 #include <ti/drivers/dma/UDMAMSP432E4.h>
 
-#if defined(__TI_COMPILER_VERSION__)
-#pragma DATA_ALIGN(dmaControlTable, 1024)
-#elif defined(__IAR_SYSTEMS_ICC__)
-#pragma data_alignment=1024
-#elif defined(__GNUC__)
-__attribute__ ((aligned (1024)))
-#endif
-static tDMAControlTable dmaControlTable[64];
+static tDMAControlTable dmaControlTable[64] __attribute__ ((aligned (1024)));
 
 /*
  *  ======== dmaErrorFxn ========
@@ -388,6 +595,14 @@ void MSP_EXP432E401Y_initGeneral(void)
 }
 
 /*
+ *  ======== Board_init ========
+ */
+void Board_init(void)
+{
+    MSP_EXP432E401Y_initGeneral();
+}
+
+/*
  *  =============================== EMAC ===============================
  */
 /* minimize scope of ndk/inc/stk_main.h -- this eliminates TIPOSIX path dependencies */
@@ -441,8 +656,32 @@ const EMACMSP432E4_HWAttrs EMACMSP432E4_hwAttrs = {
  *       reduce memory usage.
  */
 GPIO_PinConfig gpioPinConfigs[] = {
+    /* Input pins */
+    /* MSP_EXP432E401Y_USR_SW1 */
+    GPIOMSP432E4_PJ0 | GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_RISING,
+    /* MSP_EXP432E401Y_USR_SW2 */
+    GPIOMSP432E4_PJ1 | GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_RISING,
+
+    /* MSP_EXP432E401Y_SPI_MASTER_READY */
+    GPIOMSP432E4_PM3 | GPIO_DO_NOT_CONFIG,
+    /* MSP_EXP432E401Y_SPI_SLAVE_READY */
+    GPIOMSP432E4_PL0 | GPIO_DO_NOT_CONFIG,
+
+    /* Output pins */
+    /* MSP_EXP432E401Y_USR_D1 */
+    GPIOMSP432E4_PN1 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_LOW,
+    /* MSP_EXP432E401Y_USR_D2 */
+    GPIOMSP432E4_PN0 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_LOW,
+    /* MSP_EXP432E401Y_TMP116_EN */
+    GPIOMSP432E4_PK3 | GPIO_DO_NOT_CONFIG,
+
     /* MSP_EXP432E401Y_SDSPI_CS */
-    GPIOMSP432E4_PP5 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_HIGH,
+    GPIOMSP432E4_PC7 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_HIGH,
+
+    /* Sharp Display - GPIO configurations will be done in the Display files */
+    GPIOMSP432E4_PE5 | GPIO_DO_NOT_CONFIG, /* SPI chip select */
+    GPIOMSP432E4_PC6 | GPIO_DO_NOT_CONFIG, /* LCD power control */
+    GPIOMSP432E4_PE4 | GPIO_DO_NOT_CONFIG, /*LCD enable */
 };
 
 /*
@@ -464,7 +703,7 @@ const GPIOMSP432E4_Config GPIOMSP432E4_config = {
     .pinConfigs = (GPIO_PinConfig *)gpioPinConfigs,
     .callbacks = (GPIO_CallbackFxn *)gpioCallbackFunctions,
     .numberOfPinConfigs = sizeof(gpioPinConfigs)/sizeof(GPIO_PinConfig),
-    .numberOfCallbacks = 0,
+    .numberOfCallbacks = sizeof(gpioCallbackFunctions)/sizeof(GPIO_CallbackFxn),
     .intPriority = (~0)
 };
 
@@ -478,20 +717,12 @@ I2CMSP432E4_Object i2cMSP432E4Objects[MSP_EXP432E401Y_I2CCOUNT];
 
 const I2CMSP432E4_HWAttrs i2cMSP432E4HWAttrs[MSP_EXP432E401Y_I2CCOUNT] = {
     {
-        .baseAddr = I2C0_BASE,
-        .intNum = INT_I2C0,
+        .baseAddr = I2C2_BASE,
+        .intNum = INT_I2C2,
         .intPriority = (~0),
-        .sclPin = I2CMSP432E4_PB2_I2C0SCL,
-        .sdaPin = I2CMSP432E4_PB3_I2C0SDA,
+        .sclPin = I2CMSP432E4_PN5_I2C2SCL,
+        .sdaPin = I2CMSP432E4_PN4_I2C2SDA,
         .masterCode = 0x08
-    },
-    {
-        .baseAddr = I2C7_BASE,
-        .intNum = INT_I2C7,
-        .intPriority = (~0),
-        .sclPin = I2CMSP432E4_PD0_I2C7SCL,
-        .sdaPin = I2CMSP432E4_PD1_I2C7SDA,
-        .masterCode = 0x09
     }
 };
 
@@ -500,12 +731,7 @@ const I2C_Config I2C_config[MSP_EXP432E401Y_I2CCOUNT] = {
         .fxnTablePtr = &I2CMSP432E4_fxnTable,
         .object = &i2cMSP432E4Objects[MSP_EXP432E401Y_I2C0],
         .hwAttrs = &i2cMSP432E4HWAttrs[MSP_EXP432E401Y_I2C0]
-    },
-    {
-        .fxnTablePtr = &I2CMSP432E4_fxnTable,
-        .object = &i2cMSP432E4Objects[MSP_EXP432E401Y_I2C7],
-        .hwAttrs = &i2cMSP432E4HWAttrs[MSP_EXP432E401Y_I2C7]
-    },
+    }
 };
 
 const uint_least8_t I2C_count = MSP_EXP432E401Y_I2CCOUNT;
@@ -649,7 +875,7 @@ SDSPI_Object sdspiObjects[MSP_EXP432E401Y_SDCOUNT];
 
 const SDSPI_HWAttrs sdspiHWAttrs[MSP_EXP432E401Y_SDCOUNT] = {
     {
-        .spiIndex = MSP_EXP432E401Y_SPI3,
+        .spiIndex = MSP_EXP432E401Y_SPI2,
         .spiCsGpioIndex = MSP_EXP432E401Y_SDSPI_CS
     }
 };
@@ -663,6 +889,29 @@ const SD_Config SD_config[MSP_EXP432E401Y_SDCOUNT] = {
 };
 
 const uint_least8_t SD_count = MSP_EXP432E401Y_SDCOUNT;
+
+/*
+ *  =============================== SHA2 ===============================
+ */
+#include <ti/drivers/SHA2.h>
+#include <ti/drivers/sha2/SHA2MSP432E4.h>
+
+SHA2MSP432E4_Object sha2MSP432E4Objects[MSP_EXP432E401Y_SHA2COUNT];
+
+const SHA2MSP432E4_HWAttrs sha2MSP432E4HWAttrs[MSP_EXP432E401Y_SHA2COUNT] = {
+    {
+        .intPriority       = (~0),
+    }
+};
+
+const SHA2_Config SHA2_config[MSP_EXP432E401Y_SHA2COUNT] = {
+    {
+         .object  = &sha2MSP432E4Objects[MSP_EXP432E401Y_SHA20],
+         .hwAttrs = &sha2MSP432E4HWAttrs[MSP_EXP432E401Y_SHA20]
+    },
+};
+
+const uint_least8_t SHA2_count = MSP_EXP432E401Y_SHA2COUNT;
 
 /*
  *  =============================== SPI ===============================

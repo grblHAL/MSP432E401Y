@@ -24,10 +24,26 @@
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>Board</name>
+			<type>2</type>
+			<location>C:/ti/simplelink_msp432e4_sdk_4_20_00_12/source/ti/boards/MSP_EXP432E401Y</location>
+		</link>
+		<link>
+			<name>MSP_EXP432E401Y</name>
+			<type>2</type>
+			<locationURI>$%7BCOM_TI_SIMPLELINK_MSP432E4_SDK_INSTALL_DIR%7D/source/ti/boards/MSP_EXP432E401Y</locationURI>
+		</link>
+	</linkedResources>
 	<variableList>
 		<variable>
 			<name>FREERTOS_LOC</name>
 			<value>file:/D:/Projects/CCS/freertos_builds_MSP_EXP432E401Y_release_ccs</value>
+		</variable>
+		<variable>
+			<name>SIMPLELINK_MSP432E4_SDK_LIBRARY_PATH</name>
+			<value>file:/C:/ti/simplelink_msp432e4_sdk_4_20_00_12/source/ti/devices/msp432e4/driverlib/lib/ccs/m4f</value>
 		</variable>
 	</variableList>
 </projectDescription>
