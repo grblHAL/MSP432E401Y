@@ -1,6 +1,9 @@
 ## MSP432E401Y
 
-A GrblHAL driver for the Texas Instruments [MSP432E401Y LaunchPad](http://www.ti.com/tool/MSP-EXP432E401Y#).
+> [!NOTE]
+> 2025-05-29: End of support notice. This driver will no longer be updated, the latest core build it can be used with is 20250518.
+
+A grblHAL driver for the Texas Instruments [MSP432E401Y LaunchPad](http://www.ti.com/tool/MSP-EXP432E401Y#).
 
 See the Wiki-page for [compiling grblHAL](https://github.com/grblHAL/core/wiki/Compiling-GrblHAL) for instructions for how to import the project, configure the driver and compile.
 
@@ -46,4 +49,4 @@ The empty project is of no interest - it can be deleted, we need to build the _f
 Prepare the driver project in the MSP432E401Y folder by copying the grbl source code from the GRBL folder in the root of the download to GRBL folder inside the MSP432E401Y folder.
 
 ---
-2021-04-14
+2025-05-29
